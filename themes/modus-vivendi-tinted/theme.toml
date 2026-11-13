@@ -1,0 +1,48 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Modus Vivendi Tinted: opaque surfaces preserve color contrast over wallpaper.
+version = 1
+id = "modus-vivendi-tinted"
+name = "Modus Vivendi Tinted"
+description = "Indigo nights, luminous type, and lavender reflection. Four quiet studies in botany, dusk, starlight, and thought, in tribute to Protesilaos Stavrou."
+author = "natex; palette by Protesilaos Stavrou"
+tags = ["dark", "modus", "tinted", "indigo", "lavender", "contemplative"]
+
+[palette]
+background = "#0d0e1c"
+surface = "#1d2235"
+foreground = "#ffffff"
+muted = "#989898"
+accent = "#79a8ff"
+secondary = "#b6a0ff"
+ansi = [
+  "#000000", "#ff5f59", "#44bc44", "#d0bc00",
+  "#2fafff", "#feacd0", "#00d3d0", "#a6a6a6",
+  "#595959", "#ff6b55", "#11c777", "#fec43f",
+  "#79a8ff", "#b6a0ff", "#6ae4b9", "#ffffff"
+]
+
+[files]
+ghostty = "apps/ghostty.conf"
+foot = "apps/foot.ini"
+alacritty = "apps/alacritty.toml"
+kitty = "apps/kitty.conf"
+waybar = "apps/waybar.css"
+fuzzel = "apps/fuzzel.ini"
+hyprlock = "apps/hyprlock.conf"
+regreet = "apps/regreet.css"
+
+[[wallpapers]]
+name = "Violet herbarium"
+path = "wallpapers/01-violet-herbarium.png"
+
+[[wallpapers]]
+name = "Dusk amphitheatre"
+path = "wallpapers/02-dusk-amphitheatre.png"
+
+[[wallpapers]]
+name = "Stellar dialogue"
+path = "wallpapers/03-stellar-dialogue.png"
+
+[[wallpapers]]
+name = "Plum scriptorium"
+path = "wallpapers/04-plum-scriptorium.png"
