@@ -12,9 +12,14 @@ Validated against the installed Mango Grove CLI on 2026-11-12, using isolated ro
   0, 1, 2, and 3; lock selection was `(desktop + 1) % 4`, login selection was
   `(desktop + 2) % 4`. SHA-256 checks confirmed each of the three installed wallpaper
   files matched the selected original. Undo removed newly created configuration files.
-- `foot --check-config --config /tmp/grove-operandi-worker/config/foot/foot.ini` and
-  `ghostty +validate-config --config-default-files=false --config-file=/tmp/grove-operandi-worker/config/ghostty/config`
+- `foot --check-config --config /tmp/grove-operandi-worker/config/foot/foot.ini`
   passed while the initial apply was present.
+- The initial Ghostty check used an unsupported `--config-default-files=false` flag;
+  that invocation was replaced during final audit. After creating an empty isolated
+  configuration directory with `mkdir -p /tmp/modus-operandi-ghostty-config`, the exact
+  successful native check was:
+  `XDG_CONFIG_HOME=/tmp/modus-operandi-ghostty-config ghostty +validate-config --config-file=/tmp/modus-operandi/themes/modus-operandi/apps/ghostty.conf`.
+  It exited **0** with no diagnostics.
 - GTK3 `Gtk.CssProvider.load_from_path` parsed `apps/waybar.css` without errors;
   GTK4 parsed `apps/regreet.css` without errors. Neither parser requires launching the app.
 - Python `tomllib` parsed the installed Alacritty TOML and confirmed `window.opacity = 1.0`.
