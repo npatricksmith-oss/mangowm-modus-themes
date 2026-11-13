@@ -9,6 +9,8 @@ Four desktop themes based on [Protesilaos Stavrou's Modus themes](https://github
 | `themes/modus-vivendi-tinted` | Midnight blue, white type, luminous accents | Four original images |
 | `themes/modus-operandi-tinted` | Warm ochre paper, black type, deep accents | Four original images |
 
+Browse the [wallpaper gallery](docs/wallpapers.md) and [worker reports and integration record](docs/worker-reports.md).
+
 Each directory is a portable version-1 Grove bundle. It includes `theme.toml`, native application overrides, four original generated landscape wallpapers, and `SOURCES.md` with palette attribution and complete image prompts. The landscapes, quiet studies, Mediterranean materials, and restrained geometry are an ode to Prot's care for clarity and thoughtful work; they do not imply his endorsement.
 
 Coverage: Ghostty, Foot, Alacritty, Kitty, MangoWM, Waybar, Fuzzel, Hyprlock, ReGreet, desktop wallpaper, Grove's interface, and the Mango Power Menu palette. Chrome and T3 Code are excluded. Grove's component list must be supplied explicitly when applying these bundles.
