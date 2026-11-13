@@ -1,0 +1,45 @@
+version = 1
+id = "modus-operandi-tinted"
+name = "Modus Operandi Tinted"
+description = "Prot’s warm-paper Modus palette, dark ink, and quiet Mediterranean material studies."
+author = "MangoWM Modus contributors; palette by Protesilaos Stavrou"
+tags = ["light", "tinted", "modus", "paper", "mediterranean"]
+
+[palette]
+background = "#fbf7f0"
+surface = "#efe9dd"
+foreground = "#000000"
+muted = "#595959"
+accent = "#3546c2"
+secondary = "#531ab6"
+ansi = [
+  "#000000", "#a60000", "#006300", "#6d5000",
+  "#0031a9", "#721045", "#00598b", "#a6a6a6",
+  "#595959", "#972500", "#00603f", "#894000",
+  "#3546c2", "#531ab6", "#005f5f", "#ffffff",
+]
+
+[files]
+ghostty = "apps/ghostty.conf"
+foot = "apps/foot.ini"
+alacritty = "apps/alacritty.toml"
+kitty = "apps/kitty.conf"
+waybar = "apps/waybar.css"
+hyprlock = "apps/hyprlock.conf"
+regreet = "apps/regreet.css"
+
+[[wallpapers]]
+name = "Paper terrain"
+path = "wallpapers/01-paper-terrain.png"
+
+[[wallpapers]]
+name = "Portico of afternoon"
+path = "wallpapers/02-portico.png"
+
+[[wallpapers]]
+name = "The long olive path"
+path = "wallpapers/03-olive-afternoon.png"
+
+[[wallpapers]]
+name = "Sculpture and thought"
+path = "wallpapers/04-sculptors-table.png"
