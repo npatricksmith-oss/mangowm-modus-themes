@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Modus Vivendi: opaque surfaces preserve the palette over wallpaper.
+[window]
+opacity = 1.0
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#79a8ff"
+
+[colors.selection]
+text = "#ffffff"
+background = "#1e1e1e"
+
+[colors.normal]
+black = "#000000"
+red = "#ff5f59"
+green = "#44bc44"
+yellow = "#d0bc00"
+blue = "#2fafff"
+magenta = "#feacd0"
+cyan = "#00d3d0"
+white = "#a6a6a6"
+
+[colors.bright]
+black = "#595959"
+red = "#ff6b55"
+green = "#00c06f"
+yellow = "#fec43f"
+blue = "#79a8ff"
+magenta = "#b6a0ff"
+cyan = "#6ae4b9"
+white = "#ffffff"
