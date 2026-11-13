@@ -1,0 +1,92 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Modus Vivendi: opaque input surfaces and explicit text roles. */
+@define-color grove_bg #000000;
+@define-color grove_surface #1e1e1e;
+@define-color grove_fg #ffffff;
+@define-color grove_muted #989898;
+@define-color grove_accent #79a8ff;
+@define-color grove_secondary #b6a0ff;
+@define-color grove_red #ff5f59;
+@define-color window_bg_color @grove_bg;
+@define-color window_fg_color @grove_fg;
+@define-color view_bg_color @grove_surface;
+@define-color view_fg_color @grove_fg;
+@define-color card_bg_color @grove_surface;
+@define-color card_fg_color @grove_fg;
+@define-color popover_bg_color @grove_surface;
+@define-color popover_fg_color @grove_fg;
+@define-color headerbar_bg_color @grove_surface;
+@define-color headerbar_fg_color @grove_fg;
+@define-color accent_color @grove_accent;
+@define-color accent_bg_color @grove_accent;
+@define-color accent_fg_color @grove_bg;
+@define-color destructive_color @grove_red;
+@define-color destructive_bg_color @grove_red;
+@define-color destructive_fg_color @grove_bg;
+@define-color error_color @grove_red;
+@define-color error_bg_color @grove_red;
+
+window { background-color: @grove_bg; color: @grove_fg; }
+frame, frame > border, entry, passwordentry, text, button, combobox,
+.clock, .login-form {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+}
+entry, passwordentry {
+    min-height: 44px;
+    padding: 2px 16px;
+    background-color: @grove_bg;
+    color: @grove_fg;
+    border-radius: 8px;
+    caret-color: @grove_accent;
+}
+entry text, passwordentry text { color: @grove_fg; caret-color: @grove_accent; }
+entry:focus-within, passwordentry:focus-within {
+    background-color: @grove_surface;
+    outline: 1px solid @grove_accent;
+}
+.username { font-size: 36px; font-weight: 400; }
+.password, .login-form > entry:not(.username) { font-size: 31.5px; }
+.field-label { color: @grove_muted; font-size: 18px; letter-spacing: 1.5px; }
+.notification { color: @grove_red; font-size: 18px; }
+.clock label { color: @grove_fg; font-size: 22.5px; font-weight: 300; }
+.session-picker { font-size: 18px; color: @grove_fg; }
+.session-picker button {
+    padding: 4px 10px;
+    min-height: 24px;
+    color: @grove_fg;
+    background-color: @grove_bg;
+}
+.session-picker arrow { min-width: 9px; min-height: 9px; }
+button.power-control {
+    padding: 0;
+    border-radius: 22px;
+    color: @grove_fg;
+    background-color: @grove_bg;
+}
+button.power-control image { -gtk-icon-size: 17px; }
+button.power-control:hover, button.power-control:focus-visible,
+.session-picker button:hover, .session-picker button:focus-visible {
+    background-color: @grove_surface;
+    color: @grove_accent;
+}
+button.power-control:active { color: @grove_secondary; }
+popover > contents, menu {
+    border: 1px solid @grove_muted;
+    box-shadow: none;
+    background-color: @grove_bg;
+    color: @grove_fg;
+    border-radius: 10px;
+    padding: 6px;
+}
+modelbutton { border: none; border-radius: 6px; color: @grove_fg; }
+modelbutton:hover, modelbutton:selected { background-color: @grove_surface; }
+tooltip, tooltip > box {
+    border: 1px solid @grove_muted;
+    box-shadow: none;
+    background-color: @grove_bg;
+    color: @grove_fg;
+}
