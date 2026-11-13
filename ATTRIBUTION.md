@@ -1,5 +1,7 @@
 # Attribution
 
+Upstream source notice: **Copyright (C) 2019–2026 Free Software Foundation, Inc.** Author and maintainer: **Protesilaos Stavrou**.
+
 The Modus palettes are by Protesilaos Stavrou and contributors, from <https://github.com/protesilaos/modus-themes>, pinned to commit `782743415b3eedac0b99db2342fb35703deb752f`.
 
 This collection ports the named palette roles to Mango Grove. It is an independent project and is not endorsed by the original author. The upstream work is licensed under GNU GPL version 3 or later. The existing repository `LICENSE` contains GNU GPL version 3; this port and its palette data are provided under GPL-3.0-or-later.
