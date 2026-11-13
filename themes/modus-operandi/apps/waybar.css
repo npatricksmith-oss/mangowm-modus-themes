@@ -1,0 +1,99 @@
+/* Modus Operandi. Color and surface styling only; retain the user's bar layout. */
+@define-color grove_bg #ffffff;
+@define-color grove_surface #f2f2f2;
+@define-color grove_fg #000000;
+@define-color grove_muted #595959;
+@define-color grove_accent #3548cf;
+@define-color grove_secondary #531ab6;
+@define-color grove_red #a60000;
+@define-color grove_green #006800;
+@define-color grove_yellow #6f5500;
+@define-color grove_blue #0031a9;
+@define-color grove_cyan #005e8b;
+@define-color bg @grove_bg;
+@define-color bg-dark @grove_surface;
+@define-color fg @grove_fg;
+@define-color selection @grove_surface;
+@define-color comment @grove_muted;
+@define-color red @grove_red;
+@define-color green @grove_green;
+@define-color yellow @grove_yellow;
+@define-color orange @grove_secondary;
+@define-color blue @grove_blue;
+@define-color cyan @grove_cyan;
+@define-color pink @grove_secondary;
+@define-color purple #721045;
+
+window#waybar {
+    background: @grove_bg;
+    color: @grove_fg;
+    border: none;
+    border-bottom: 1px solid #9f9f9f;
+}
+window#waybar #clock, window#waybar #battery, window#waybar #network,
+window#waybar #pulseaudio, window#waybar #wireplumber, window#waybar #tray,
+window#waybar #backlight, window#waybar #power-profiles-daemon,
+window#waybar #cpu, window#waybar #memory, window#waybar #disk,
+window#waybar #temperature, window#waybar #bluetooth, window#waybar #idle_inhibitor,
+window#waybar #custom-layout, window#waybar #custom-display {
+    background: transparent;
+    color: @grove_fg;
+    border-color: transparent;
+    box-shadow: none;
+}
+window#waybar #clock {
+    color: @grove_accent;
+    font-weight: 600;
+}
+window#waybar #custom-layout {
+    color: @grove_accent;
+    background: @grove_surface;
+}
+window#waybar #custom-display { color: @grove_muted; }
+window#waybar #workspaces button, window#waybar #taskbar button {
+    color: @grove_muted;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+window#waybar #workspaces button:hover, window#waybar #taskbar button:hover {
+    color: @grove_accent;
+    background: @grove_surface;
+    border-color: transparent;
+    box-shadow: none;
+}
+window#waybar #workspaces button.active, window#waybar #workspaces button.focused,
+window#waybar #taskbar button.active {
+    color: @grove_bg;
+    background: @grove_accent;
+    border-color: @grove_accent;
+}
+window#waybar #workspaces button.urgent, window#waybar #taskbar button.urgent {
+    color: @grove_bg;
+    background: @grove_red;
+    border-color: @grove_red;
+}
+window#waybar #pulseaudio.muted, window#waybar #wireplumber.muted,
+window#waybar #bluetooth.disabled { color: @grove_muted; }
+window#waybar #network.disconnected, window#waybar #bluetooth.off { color: @grove_red; }
+window#waybar #battery.charging, window#waybar #battery.plugged,
+window#waybar #power-profiles-daemon.power-saver { color: @grove_green; }
+window#waybar #power-profiles-daemon.balanced { color: @grove_muted; }
+window#waybar #battery.warning:not(.charging):not(.plugged),
+window#waybar #temperature.warning, window#waybar #power-profiles-daemon.performance,
+window#waybar #custom-display.external { color: @grove_secondary; }
+window#waybar #battery.critical:not(.charging):not(.plugged),
+window#waybar #temperature.critical {
+    color: @grove_bg;
+    background: @grove_red;
+    border-color: @grove_red;
+}
+tooltip, menu {
+    background: @grove_bg;
+    color: @grove_fg;
+    border: 1px solid #9f9f9f;
+    box-shadow: none;
+}
+tooltip label, menu menuitem { color: @grove_fg; }
+menu menuitem:hover { background: @grove_accent; color: @grove_bg; }

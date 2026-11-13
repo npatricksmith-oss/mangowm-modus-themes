@@ -1,0 +1,56 @@
+/* Modus Operandi: opaque controls and text, preserving ReGreet layout. */
+@define-color grove_bg #ffffff;
+@define-color grove_surface #f2f2f2;
+@define-color grove_glass #f2f2f2;
+@define-color grove_fg #000000;
+@define-color grove_muted #595959;
+@define-color grove_accent #3548cf;
+@define-color grove_secondary #531ab6;
+@define-color grove_red #a60000;
+@define-color grove_text #000000;
+@define-color grove_clock #000000;
+@define-color grove_label #595959;
+@define-color grove_error #a60000;
+@define-color window_bg_color @grove_bg;
+@define-color window_fg_color @grove_fg;
+@define-color view_bg_color @grove_surface;
+@define-color view_fg_color @grove_fg;
+@define-color card_bg_color @grove_surface;
+@define-color card_fg_color @grove_fg;
+@define-color popover_bg_color @grove_bg;
+@define-color popover_fg_color @grove_fg;
+@define-color headerbar_bg_color @grove_surface;
+@define-color headerbar_fg_color @grove_fg;
+@define-color accent_color @grove_accent;
+@define-color accent_bg_color @grove_accent;
+@define-color accent_fg_color @grove_bg;
+@define-color destructive_color @grove_red;
+@define-color destructive_bg_color @grove_red;
+@define-color destructive_fg_color @grove_bg;
+@define-color error_color @grove_red;
+@define-color error_bg_color @grove_red;
+
+window { background-color: @grove_bg; color: @grove_fg; }
+.login-form, .clock { background-color: @grove_bg; color: @grove_fg; }
+entry, passwordentry, text, combobox, button {
+    background-image: none;
+    background-color: @grove_surface;
+    color: @grove_fg;
+    border-color: @grove_muted;
+    box-shadow: none;
+    opacity: 1;
+}
+entry text, passwordentry text, .username, .password { color: @grove_fg; opacity: 1; }
+.clock label { color: @grove_clock; opacity: 1; }
+.field-label, .session-picker, .session-picker button { color: @grove_label; opacity: 1; }
+.notification { color: @grove_error; background-color: @grove_bg; opacity: 1; }
+button:hover, button:focus-visible, .session-picker button:hover {
+    background-color: @grove_accent; color: @grove_bg;
+}
+button:active { background-color: @grove_secondary; color: @grove_bg; }
+popover > contents, menu, tooltip, tooltip > box {
+    background-color: @grove_bg; color: @grove_fg;
+    background-image: none; opacity: 1;
+}
+modelbutton { background-color: @grove_bg; color: @grove_fg; }
+modelbutton:hover, modelbutton:selected { background-color: @grove_accent; color: @grove_bg; }

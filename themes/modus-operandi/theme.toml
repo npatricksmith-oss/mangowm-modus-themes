@@ -1,0 +1,45 @@
+version = 1
+id = "modus-operandi"
+name = "Modus Operandi"
+description = "Prot’s crisp white Modus palette, clear graphite text, and quiet Mediterranean studies."
+author = "MangoWM Modus contributors; palette by Protesilaos Stavrou"
+tags = ["light", "modus", "white", "accessible", "mediterranean"]
+
+[palette]
+background = "#ffffff"
+surface = "#f2f2f2"
+foreground = "#000000"
+muted = "#595959"
+accent = "#3548cf"
+secondary = "#531ab6"
+ansi = [
+  "#000000", "#a60000", "#006800", "#6f5500",
+  "#0031a9", "#721045", "#005e8b", "#a6a6a6",
+  "#595959", "#972500", "#00663f", "#884900",
+  "#3548cf", "#531ab6", "#005f5f", "#ffffff",
+]
+
+[files]
+ghostty = "apps/ghostty.conf"
+foot = "apps/foot.ini"
+alacritty = "apps/alacritty.toml"
+kitty = "apps/kitty.conf"
+waybar = "apps/waybar.css"
+hyprlock = "apps/hyprlock.conf"
+regreet = "apps/regreet.css"
+
+[[wallpapers]]
+name = "Courtyard of clarity"
+path = "wallpapers/01-courtyard.png"
+
+[[wallpapers]]
+name = "Paper and thought"
+path = "wallpapers/02-paper-relief.png"
+
+[[wallpapers]]
+name = "Olive paths"
+path = "wallpapers/03-olive-paths.png"
+
+[[wallpapers]]
+name = "A place to think"
+path = "wallpapers/04-study.png"
