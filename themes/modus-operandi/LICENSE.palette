@@ -1,3 +1,16 @@
+Modus palette source notice
+
+Copyright (C) 2019-2026 Free Software Foundation, Inc.
+Author: Protesilaos <info@protesilaos.com>
+Maintainer: Protesilaos <info@protesilaos.com>
+Upstream: https://github.com/protesilaos/modus-themes
+Source: modus-themes.el, modus-themes-operandi-palette and common terminal mappings
+Revision: 782743415b3eedac0b99db2342fb35703deb752f
+
+The source palette is part of GNU Emacs and is distributed under the GNU
+General Public License, version 3 or (at your option) any later version.
+The complete GPL version 3 license text follows.
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
