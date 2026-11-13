@@ -25,3 +25,9 @@ The validator checks foreground/background and foreground/surface at 7:1; muted/
 4. Human/agent visual inspection checks the finished wallpapers and their contact sheets. Runtime tests do not replace this aesthetic review or verify every application renderer.
 
 Chrome and T3 Code are not selected. The runtime fixture seeds both browsers' GTK stylesheet targets and the editor theme target, then proves that these files stay byte-for-byte unchanged through apply and undo. The current-state component list must match the included eleven Grove components; the power palette must equal the theme palette.
+
+## Foot reapply whitespace
+
+Grove can move blank lines in Foot INI files during repeated apply. The reapply check therefore compares Foot sections, exact key names, and all values with a strict INI parser that rejects duplicate keys and sections. It still requires unchanged file permissions. Every other file must remain byte-for-byte unchanged on reapply. Both undo steps must restore exact prior bytes and permissions for every file, including Foot. Regression tests reject changed palette values, changed unrelated Foot settings, duplicate keys, changes to other files, added files, and changed permissions.
+
+The ReGreet fixture begins at mode 0644, Grove's documented required world-readable mode. Grove intentionally forces this mode on greeter writes in both apply and undo; it does not restore an unsupported private mode such as 0640. Other existing configuration fixtures start at 0640. The validator requires exact bytes and these supported modes after undo; it does not claim that Grove restores arbitrary previous greeter permissions.

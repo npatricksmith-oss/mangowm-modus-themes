@@ -103,5 +103,58 @@ class ValidatorTests(unittest.TestCase):
         self.assertFalse(v.EXCLUDED.intersection(v.COMPONENTS))
         self.assertEqual(len(v.COMPONENTS),11)
 
+
+class ReapplyTests(unittest.TestCase):
+    def setUp(self):
+        self.foot = v.APP_PATHS['foot']
+        self.before = {
+            self.foot: (b'[main]\nfont=monospace:size=13\n[colors-dark]\nalpha=1\nbackground=000000\n\n[colors-light]\nbackground=000000\n', 0o640),
+            'config/kitty/kitty.conf': (b'font_size 13\n', 0o640),
+        }
+
+    def test_only_foot_whitespace_movement_allowed(self):
+        after = dict(self.before)
+        content, mode = after[self.foot]
+        after[self.foot] = (content.replace(b'[colors-dark]\n', b'[colors-dark]\n\n').replace(b'\n\n[colors-light]', b'\n[colors-light]'),mode)
+        v.check_reapply(self.before,after)
+
+    def test_foot_changed_palette_rejected(self):
+        after = dict(self.before)
+        content,mode = after[self.foot]
+        after[self.foot] = (content.replace(b'background=000000', b'background=ffffff'),mode)
+        with self.assertRaisesRegex(ValueError, 'Foot INI values'):
+            v.check_reapply(self.before,after)
+
+    def test_foot_changed_unrelated_setting_rejected(self):
+        after = dict(self.before)
+        content,mode = after[self.foot]
+        after[self.foot] = (content.replace(b'size=13', b'size=15'),mode)
+        with self.assertRaisesRegex(ValueError, 'Foot INI values'):
+            v.check_reapply(self.before,after)
+
+    def test_foot_duplicate_key_rejected(self):
+        after = dict(self.before)
+        content,mode = after[self.foot]
+        after[self.foot] = (content.replace(b'alpha=1', b'alpha=1\nalpha=1'),mode)
+        with self.assertRaises(v.configparser.DuplicateOptionError):
+            v.check_reapply(self.before,after)
+
+    def test_other_file_whitespace_change_rejected(self):
+        after = dict(self.before)
+        after['config/kitty/kitty.conf'] = (b'font_size 13\n\n',0o640)
+        with self.assertRaisesRegex(ValueError, 'file bytes'):
+            v.check_reapply(self.before,after)
+
+    def test_foot_permissions_change_rejected(self):
+        after = dict(self.before)
+        after[self.foot] = (after[self.foot][0],0o644)
+        with self.assertRaisesRegex(ValueError, 'permissions'):
+            v.check_reapply(self.before,after)
+
+    def test_added_file_rejected(self):
+        after = dict(self.before,new_file=(b'added',0o640))
+        with self.assertRaisesRegex(ValueError, 'file set'):
+            v.check_reapply(self.before,after)
+
 if __name__ == '__main__':
     unittest.main()

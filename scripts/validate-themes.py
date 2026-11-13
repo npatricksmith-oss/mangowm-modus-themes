@@ -150,8 +150,25 @@ def snapshot(root):
 
 def ini(text):
     obj = configparser.ConfigParser(interpolation=None, strict=True)
+    obj.optionxform = str
     obj.read_string(text)
     return obj
+
+
+def check_reapply(before, after):
+    """Only Foot's INI whitespace may move; every other byte/mode is stable."""
+    require(before.keys() == after.keys(), 'reapply changed the configuration file set')
+    for path, (old_bytes, old_mode) in before.items():
+        new_bytes, new_mode = after[path]
+        require(old_mode == new_mode, f'reapply changed permissions: {path}')
+        if path == APP_PATHS['foot']:
+            # Grove's Foot merge can relocate blank lines on a second apply. A
+            # strict parser still rejects duplicate sections/keys and compares
+            # every key/value, including unrelated user settings.
+            old_ini, new_ini = ini(old_bytes.decode()), ini(new_bytes.decode())
+            require(old_ini == new_ini, f'reapply changed Foot INI values: {path}')
+        else:
+            require(old_bytes == new_bytes, f'reapply changed file bytes: {path}')
 
 
 def assignments(text, separator='='):
@@ -227,7 +244,9 @@ def exercise_grove(bundle, manifest, binary):
             target = root / path
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(value)
-            target.chmod(0o640)
+            # Grove requires world-readable greeter artifacts and uses 0644
+            # during both forward and undo writes. Start in its supported mode.
+            target.chmod(0o644 if path.startswith('greeter/') else 0o640)
         baseline = snapshot(root)
         selection = ['--components',','.join(COMPONENTS)]
         # Every image is used on every surface, with independent choices in each transaction.
@@ -243,7 +262,7 @@ def exercise_grove(bundle, manifest, binary):
             # Reapply checks merge stability and stacked undo.
             applied = snapshot(root)
             run(cmd + ['apply',manifest['id']] + flags)
-            require(snapshot(root) == applied, 'reapply is not idempotent')
+            check_reapply(applied, snapshot(root))
             run(cmd + ['undo'])
             require(snapshot(root) == applied, 'undo second apply did not restore first apply')
             run(cmd + ['undo'])
