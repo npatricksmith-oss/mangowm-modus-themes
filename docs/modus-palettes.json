@@ -1,0 +1,149 @@
+{
+  "upstream": "https://github.com/protesilaos/modus-themes",
+  "revision": "782743415b3eedac0b99db2342fb35703deb752f",
+  "source_file": "modus-themes.el",
+  "roles": {
+    "background": "bg-main",
+    "surface": "bg-dim",
+    "foreground": "fg-main",
+    "muted": "fg-dim",
+    "accent": "blue-warmer",
+    "secondary": "magenta-cooler"
+  },
+  "ansi_roles": [
+    "#000000",
+    "red",
+    "green",
+    "yellow",
+    "blue",
+    "magenta",
+    "cyan",
+    "#a6a6a6",
+    "#595959",
+    "red-warmer",
+    "green-cooler",
+    "yellow-warmer",
+    "blue-warmer",
+    "magenta-cooler",
+    "cyan-cooler",
+    "#ffffff"
+  ],
+  "themes": {
+    "modus-vivendi": {
+      "source_constant": "modus-themes-vivendi-palette",
+      "palette": {
+        "background": "#000000",
+        "surface": "#1e1e1e",
+        "foreground": "#ffffff",
+        "muted": "#989898",
+        "accent": "#79a8ff",
+        "secondary": "#b6a0ff",
+        "ansi": [
+          "#000000",
+          "#ff5f59",
+          "#44bc44",
+          "#d0bc00",
+          "#2fafff",
+          "#feacd0",
+          "#00d3d0",
+          "#a6a6a6",
+          "#595959",
+          "#ff6b55",
+          "#00c06f",
+          "#fec43f",
+          "#79a8ff",
+          "#b6a0ff",
+          "#6ae4b9",
+          "#ffffff"
+        ]
+      }
+    },
+    "modus-operandi": {
+      "source_constant": "modus-themes-operandi-palette",
+      "palette": {
+        "background": "#ffffff",
+        "surface": "#f2f2f2",
+        "foreground": "#000000",
+        "muted": "#595959",
+        "accent": "#3548cf",
+        "secondary": "#531ab6",
+        "ansi": [
+          "#000000",
+          "#a60000",
+          "#006800",
+          "#6f5500",
+          "#0031a9",
+          "#721045",
+          "#005e8b",
+          "#a6a6a6",
+          "#595959",
+          "#972500",
+          "#00663f",
+          "#884900",
+          "#3548cf",
+          "#531ab6",
+          "#005f5f",
+          "#ffffff"
+        ]
+      }
+    },
+    "modus-vivendi-tinted": {
+      "source_constant": "modus-themes-vivendi-tinted-palette",
+      "palette": {
+        "background": "#0d0e1c",
+        "surface": "#1d2235",
+        "foreground": "#ffffff",
+        "muted": "#989898",
+        "accent": "#79a8ff",
+        "secondary": "#b6a0ff",
+        "ansi": [
+          "#000000",
+          "#ff5f59",
+          "#44bc44",
+          "#d0bc00",
+          "#2fafff",
+          "#feacd0",
+          "#00d3d0",
+          "#a6a6a6",
+          "#595959",
+          "#ff6b55",
+          "#11c777",
+          "#fec43f",
+          "#79a8ff",
+          "#b6a0ff",
+          "#6ae4b9",
+          "#ffffff"
+        ]
+      }
+    },
+    "modus-operandi-tinted": {
+      "source_constant": "modus-themes-operandi-tinted-palette",
+      "palette": {
+        "background": "#fbf7f0",
+        "surface": "#efe9dd",
+        "foreground": "#000000",
+        "muted": "#595959",
+        "accent": "#3546c2",
+        "secondary": "#531ab6",
+        "ansi": [
+          "#000000",
+          "#a60000",
+          "#006300",
+          "#6d5000",
+          "#0031a9",
+          "#721045",
+          "#00598b",
+          "#a6a6a6",
+          "#595959",
+          "#972500",
+          "#00603f",
+          "#894000",
+          "#3546c2",
+          "#531ab6",
+          "#005f5f",
+          "#ffffff"
+        ]
+      }
+    }
+  }
+}
