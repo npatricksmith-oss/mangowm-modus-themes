@@ -37,3 +37,17 @@ File: `wallpapers/04-plum-scriptorium.png`
 Full generation prompt:
 
 > Use case: stylized-concept. Asset type: original wide landscape 16:9 desktop wallpaper, native at least 1672 by 941 pixels. A quiet philosopher's stone writing alcove at blue hour, seen from within, with a low unpainted oak desk at lower right holding a closed indigo linen notebook, a small unlit ceramic oil lamp, and one olive sprig. A simple broad arched opening at left reveals distant layered indigo hills under a few stars. Rich plum-tinted plaster walls and gently cool reflected light, no active computer or screens. Keep upper center and central wall spacious and very dark for desktop legibility. Modus Vivendi Tinted colors: almost-black indigo #0d0e1c, slate #1d2235, restrained muted lavender #b6a0ff and ice-blue #79a8ff reflected at edges, tiny natural wood warmth. Cinematic editorial interior photography with tactile stone, linen and grain, subtle shadows, luxurious quiet. Subtle ode to Protesilaos Stavrou through study and Greek countryside, no likeness or portrait. No text anywhere, no writing, no logo, no watermark, no UI, no frame. Single finished full-bleed wallpaper.
+
+## Wallpaper revision — 2026-11-13
+
+Final bundle path: `wallpapers/03-stellar-dialogue.png`. Replaces the original artwork above; the earlier prompt is retained as history. Built-in image_gen, native landscape PNG, no resizing.
+
+SHA-256: `ab8c83b3fe0cc532305cd1380c7395c18c55f7f83c54eaee8c47836782fc547d`.
+
+Reference/edit input: modus-vivendi-tinted/wallpapers/03-stellar-dialogue.png.
+
+Complete final prompt:
+
+```text
+Use case: precise-object-edit. Edit this desktop wallpaper. Remove BOTH large metallic elliptical rings completely, reconstruct uninterrupted natural night sky and distant mountains behind them. Preserve the dark indigo and plum palette, sparse delicate stars, low mountain silhouettes, dim lavender horizon, wide calm negative space, landscape composition and overall restrained style. Make sky seamless and natural with no circles, rings, orbital paths, devices or new objects. Output landscape 1672x941.
+```

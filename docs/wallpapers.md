@@ -49,3 +49,5 @@ Sixteen original wallpapers, four for each Modus variant. Every image is a nativ
 The themes’ quiet landscapes, materials, botanical studies, astronomical forms, and writing spaces offer an imaginative tribute to Protesilaos Stavrou. They do not depict his actual home or imply endorsement. The exact UI palettes follow pinned upstream Modus values; the wallpapers interpret those palettes artistically.
 
 Wallpaper indices are zero-based. Use `--wallpaper`, `--lock-wallpaper`, and `--login-wallpaper` independently. The theme’s own four images appear before any shared or other-theme images discovered by Grove.
+
+Wallpaper revision on 2026-11-13: Celestial reason and Paper and thought now show a moonlit coastal inlet and a sunlit olive terrace. Stellar dialogue has a natural uninterrupted sky; Paper terrain has clean warm paper ridges without the blue line. Prompts and hashes are recorded in each bundle’s SOURCES.md.

@@ -46,3 +46,17 @@ Complete generation prompt:
 Complete generation prompt:
 
 > Use case: stylized-concept. Asset type: 16:9 landscape desktop wallpaper, large native landscape. Primary request: a sculptor's quiet table in a warm Mediterranean room, original still-life artwork for Modus Operandi Tinted. Scene: broad matte ivory limewashed wall, at the far lower left a small unglazed terracotta abstract sculpture of two gently interlocking stone arcs, a blank folded cream paper resting beside it, small deep ultramarine ceramic cup, light oak table extending across the lower quarter. No busts or recognizable people. Medium: refined editorial still-life photograph with tactile clay and paper, very soft afternoon window light, subtle beautiful shadows. Composition: wide, most of the center and right are serene warm-paper negative space, few objects low and left, elegant proportion, no visual clutter. Palette: warm paper #fbf7f0, pale parchment #efe9dd, terracotta clay, charcoal shadow, tiny deep blue #3546c2 and muted violet #531ab6 only as glaze glint. Mood: attentive, clear, thoughtful; a subtle ode to Protesilaos Stavrou's philosophy and Modus themes without depicting him. Constraints: no writing anywhere, no text, no letters, no logos, no watermark, no border, no interface; original full-bleed finished wallpaper.
+
+## Wallpaper revision — 2026-11-13
+
+Final bundle path: `wallpapers/01-paper-terrain.png`. Replaces the original artwork above; the earlier prompt is retained as history. Built-in image_gen, native landscape PNG, no resizing.
+
+SHA-256: `6b5ccaf9df18015b479e8af7021235e09b5ad884b8a10f078ebbce27052c0acd`.
+
+Reference/edit input: modus-operandi-tinted/wallpapers/01-paper-terrain.png.
+
+Complete final prompt:
+
+```text
+Use case: precise-object-edit. Edit this desktop wallpaper. Remove the thin blue line along the left middle paper ridge completely and reconstruct natural warm cream/ochre paper edges and shading there. Preserve layered handmade paper terrain composition, subtle fibers, warm ivory background, ochre light, terracotta seam and spacious calm upper field. Refine any awkward edge transitions to feel clean and tactile. No blue marks, no new objects, no text. Output landscape 1672x941.
+```

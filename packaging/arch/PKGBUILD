@@ -1,0 +1,26 @@
+# Maintainer: natex <npatricksmith@gmail.com>
+pkgname=mangowm-modus-themes
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='Four Modus theme bundles and sixteen wallpapers for Mango Grove'
+arch=('any')
+url='https://github.com/npatricksmith-oss/mangowm-modus-themes'
+license=('GPL-3.0-or-later')
+optdepends=('mango-grove: import and apply the theme bundles')
+source=("$pkgname-$pkgver.tar.gz")
+sha256sums=('SOURCE_CHECKSUM')
+
+package() {
+    cd "$pkgname-$pkgver"
+    local theme
+    for theme in themes/modus-*; do
+        install -d "$pkgdir/usr/share/mango-grove/themes/${theme##*/}"
+        cp -r --no-preserve=ownership "$theme/." "$pkgdir/usr/share/mango-grove/themes/${theme##*/}/"
+    done
+    find "$pkgdir/usr/share/mango-grove/themes" -type d -exec chmod 755 {} +
+    find "$pkgdir/usr/share/mango-grove/themes" -type f -exec chmod 644 {} +
+    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+    install -Dm644 packaging/arch/README.md "$pkgdir/usr/share/doc/$pkgname/ARCH.md"
+    install -Dm644 ATTRIBUTION.md "$pkgdir/usr/share/licenses/$pkgname/ATTRIBUTION.md"
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

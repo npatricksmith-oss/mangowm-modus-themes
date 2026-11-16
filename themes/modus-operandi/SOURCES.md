@@ -60,3 +60,17 @@ Complete generation prompt:
 Complete generation prompt:
 
 > Use case: stylized-concept. Asset type: original landscape 16:9 desktop wallpaper for Modus Operandi light theme, 3840x2160 if possible. Primary request: a sunlit philosopher's study, a quiet white plaster room with a simple pale stone writing desk, one closed unmarked graphite cloth notebook, a fountain pen, a small ultramarine ceramic cup, and a single olive twig. A modest ode to the care and clarity of Protesilaos Stavrou's work, without depicting a real person's actual home. Style: polished photoreal editorial interior still life, tactile limestone, linen, handmade ceramic, clean refined geometry. Composition: wide uncluttered view, desk in lower right, open white wall over most of the image, soft diagonal window shadow, distant tiny violet flower. Lighting: pure neutral daylight and cool gray shadows, predominantly white, black and restrained blue, no beige wash. No people, no visible writing, no lettering, no logos, no watermarks, no desktop UI, no collage.
+
+## Wallpaper revision — 2026-11-13
+
+Final bundle path: `wallpapers/02-paper-relief.png`. Replaces the original artwork above; the earlier prompt is retained as history. Built-in image_gen, native landscape PNG, no resizing.
+
+SHA-256: `97b2041785aa82b7b39d066c3a116fd59ddf9c7de9043d721d9448473a2622de`.
+
+Reference/edit input: modus-operandi/wallpapers/01-courtyard.png.
+
+Complete final prompt:
+
+```text
+Use case: stylized-concept. Create one premium desktop wallpaper landscape 1672x941. Reference image sets the visual style and palette of Modus Operandi. Entirely new scene: quiet sunlit Mediterranean limestone terrace beside an olive garden, low white plaster wall, a simple stone bench, distant pale hills, soft olive leaf shadows, small restrained blue wildflowers. Natural architectural photography style with tactile plaster and stone, white and pale gray, olive foliage, very restrained blue accents. Spacious calm composition matching reference, original viewpoint. No abstract paper sculpture, no gadgets, no text, no logos.
+```

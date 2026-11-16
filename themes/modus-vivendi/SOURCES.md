@@ -41,7 +41,7 @@ Constraints: full-bleed image, no text, no letters, no logos, no watermark, no p
 
 Final bundle path: `wallpapers/02-celestial-reason.png`.
 
-SHA-256: `de98d37c913ccdd06e71d93a50e1b0dcd1fe2ab9ad0da18d24e06bfea59fa521`.
+SHA-256: `1c8ea7d2bfca5fdddd08b72a36b9027310446628d100fb6002e0b9b5ad42a9c3`.
 
 Complete generation prompt:
 
@@ -92,4 +92,18 @@ Style: cinematic tactile still-life photography with painterly restraint, exquis
 Color palette: black #000000, charcoal #1e1e1e, subdued silver #a6a6a6 and small ivory highlights, minute icy blue #2fafff and muted lavender #b6a0ff reflections. No warm pools of light.
 Composition: panoramic, small objects along the lower right margin, vast quiet central negative space for white lock-screen typography.
 Constraints: no writing, no letters, no logos, no watermark, no people, no monitor UI, no frames, no collage. A cohesive polished artwork, rich depth but predominantly dark.
+```
+
+## Wallpaper revision — 2026-11-13
+
+Final bundle path: `wallpapers/02-celestial-reason.png`. Replaces the original artwork above; the earlier prompt is retained as history. Built-in image_gen, native landscape PNG, no resizing.
+
+SHA-256: `1c8ea7d2bfca5fdddd08b72a36b9027310446628d100fb6002e0b9b5ad42a9c3`.
+
+Reference/edit input: modus-vivendi/wallpapers/01-moonlit-grove.png.
+
+Complete final prompt:
+
+```text
+Use case: stylized-concept. Create one premium desktop wallpaper, landscape 1672x941. Reference image is only a style and palette reference for Modus Vivendi. Entirely new scene: a quiet Mediterranean rocky coastal inlet at night, pale moonlight on limestone, dark still water, distant headlands and sparse olive branches at an edge. Near-black charcoal, silver, very restrained ice blue and lavender. Rich natural texture and believable atmospheric depth, tranquil broad negative space for desktop windows. No gadgets, instruments, sculptures, metallic rings, orbital diagrams, text or logos.
 ```
